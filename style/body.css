@@ -1,0 +1,200 @@
+html,body{
+    height: 100vh;
+    min-width: 1526px
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+.main{
+    width: 100%;
+    height: 100%;
+    background:no-repeat center url("../pics/bb76ec8ec56b4b158c783d0eae75ec26.jpg");
+    background-size:cover;
+}
+.main .app{
+    width: 912px;
+    height: 550px;
+    background-color: #B87C4C;
+    border-radius: 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+
+/* top */
+.main .app .top{
+    height: 80px;
+
+    position: relative;
+}
+
+.main .app .top .city{
+    width: 175px;
+    height: 55px;
+    font-size: 18px;
+    text-align: center;
+    line-height: 55px;
+    background-color: #E2B659;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 3px 12px;
+
+    float: left;
+    margin-left: 16px;
+    margin-top: 13px;
+}
+
+.main .app .top .search{
+    width: 220px;
+    height: 80px;
+    /* background-color: azure; */
+
+    float: right;
+    margin-right: 16px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+/* From uiverse.io by @alexruix */
+.input-group {
+    display: flex;
+    align-items: center;
+
+    position: relative;
+  }
+  
+  .input {
+    min-height: 40px;
+    max-width: 200px;
+    padding: 0 1rem;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    border: 1px solid #F9F871;
+    border-radius: 6px 0 0 6px;
+    background-color: rgba(0,0,0,0.15);
+  }
+  
+  .button--submit {
+    min-height: 40px;
+    padding: .5em 1em;
+    border: none;
+    border-radius: 0 6px 6px 0;
+    background-color: #E2B659;
+    color: black;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color .3s ease-in-out;
+
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+  
+  .button--submit:hover {
+    background-color: #F9F871;
+  }
+  
+  .input:focus, .input:focus-visible {
+    border-color: #E2B659;
+    outline: none;
+  }
+  
+
+.main .app .top .search .hot_city{
+    width: auto;
+    max-height: 150px;
+    margin-left: 7px;
+    list-style-type: none;
+
+    display: flex;
+    flex-direction: row;
+}
+.main .app .top .search .hot_city>a{
+    margin-right: 7px;
+    text-decoration: none;
+}
+
+/* content */
+.main .app .content{
+    height: 467px;
+    width: 100%;
+    position: relative;
+}
+.main .app .content .weeks{
+    height: 430px;
+    width: 100%;
+    background-color: aliceblue;   
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.main .app .content .weeks>li{
+    width: 24%;
+    height: 250px;
+    border-right: 1.5px solid gray;
+    list-style-type: none;
+
+    color: white;
+}
+.main .app .content .weeks>li:last-child{
+    border: none;
+}
+
+.main .app .content .weeks .day>div{
+    height: 200px;
+    width: 100%;
+    text-align: center;
+
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+.main .app .content .weeks .day div .weather_icon{
+    font-size: 45px;
+}
+.main .app .content .weeks .day div .weather_type{
+    font-size: 32px;
+    font-style: normal;
+}
+.main .app .content .weeks .day div .weather_day{
+    font-size:24px;
+    font-style: normal;
+}
+
+.main .app .content .tip{
+    display: inline-block;
+    width: 900px;
+    height: 25px;
+    font-size: 14px;
+    font-weight: 450;
+
+    position: absolute;
+    bottom: 4px;
+    left: 7px;
+}
+.main .app .content .tip .tip_content{
+    display: inline-block;
+    font-weight: 550;
+}
+
+.bgMp4{
+    position: absolute;
+    width: 100%;
+    height:92%;
+
+    object-fit:fill
+}

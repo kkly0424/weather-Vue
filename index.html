@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天气</title>
+
+    <!-- 引入style样式 -->
+    <link rel="stylesheet" href="style\body.css">
+    <link rel="stylesheet" href="icon\font_3626932_fzxieveyp09\iconfont.css">
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="vue.js" defer></script>
+    <script src="index.js" defer></script>
+
+</head>
+<body>
+    <div class="main">
+        <div class="app" id="app">
+            <div class="top">
+                <div class="city">
+                    当前城市：<b class="cur_city">{{ city }}</b>
+                </div>
+                <div class="search">
+                    <div class="input-group">
+                        <input type="search" class="input" name="Email" placeholder="输入城市" autocomplete="off" v-model="city" @keyup.enter="getWeather" @onload="getWeather('南昌')" >
+                        <input class="button--submit" type="submit" value="查询" @click="getWeather">
+                    </div>
+
+                    <ul class="hot_city" >
+                        <a href="#" class="hot1" v-for="(item,index) in hotLists"  @click="getHotWeather(index)">{{ hotLists[index] }}</a>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="content">
+                <video class="bgMp4" src="pics\1651721691283_6hzHp.mp4" autoplay loop muted></video>
+                <ul class="weeks">
+                    <li class="Mon day" v-for="(item,index) in lists">
+                        <div>
+                            <i class="weather_icon iconfont ">-</i>
+                            <i class="weather_type">{{  lists[index].type }}</i>
+                            <p class="weather_low">{{ lists[index].low }}</p>
+                            <p class="weather_high">{{ lists[index].high }}</p>
+                            <p class="date">{{ lists[index].date }}</p>
+                        </div>
+                    </li>                   
+                </ul>
+                <div class="tip">tip:
+                    <p class="tip_content">{{ tip }}</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+</html>
